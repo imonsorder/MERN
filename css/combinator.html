@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Descendant Selector (space)*/
+      div p {
+        background-color: yellow;
+      }
+
+      /* child selector (>)  */
+      div > p {
+        background-color: yellow;
+      }
+
+      /* adjacent sibling selector (+) */
+      div + p {
+        background-color: yellow;
+      }
+
+      /* general sibling selector (~) */
+      div ~ p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!--             // css combinator //
+
+There are four different combinators in CSS:
+
+1. descendant selector (space)  // jekono child k select korar jonno space dibo
+2. child selector (>)   // child gula select korar jonno 
+3. adjacent sibling selector (+)  //  porer sibling select korar jonno
+3. general sibling selector (~)   // porer sob sibling select korte ~ use korte hobe
+
+
+-->
+
+    <!-- // Descendant Selector //-->
+
+    <!-- parent div er vitore sob p select korar jonno... section er p o select hoye jabe.. -->
+
+    <div>
+      <!-- color will yellow -->
+      <p>Paragraph 1 in the div.</p>
+      <!-- color will yellow -->
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <!-- color will yellow -->
+        <p>Paragraph 3 in the div.</p>
+      </section>
+    </div>
+
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+
+    <!--    // child selector // -->
+
+    <!-- 1. parent div er sob child select korar jonno (>) use kora hoy..   kintu grand child section er moddhe ache ta select korbe na... -->
+
+    <div>
+      <!-- color will yellow -->
+      <p>Paragraph 1 in the div.</p>
+      <!-- color will yellow -->
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <!-- not Child but Descendant -->
+        <p>Paragraph 3 in the div (inside a section element).</p>
+      </section>
+      <!-- color will yellow -->
+      <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p>
+
+    <!--  // adjacent sibling selector (+) // -->
+
+    <!-- div er porer akta p select korar jonno use kora hoy...  -->
+
+    <div>
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+    </div>
+    <!-- color will yellow -->
+    <p>Paragraph 3. After a div.</p>
+    <p>Paragraph 4. After a div.</p>
+
+    <div>
+      <p>Paragraph 5 in the div.</p>
+      <p>Paragraph 6 in the div.</p>
+    </div>
+    <!-- color will yellow -->
+    <p>Paragraph 7. After a div.</p>
+    <p>Paragraph 8. After a div.</p>
+
+    <!--  // general sibling selector (~) // -->
+
+    <!-- div er pore sob p sibling select korar jonno ~ use kora hoy.... -->
+
+    <p>Paragraph 1.</p>
+
+    <div>
+      <p>Paragraph 2.</p>
+    </div>
+    <!-- color will yellow -->
+    <p>Paragraph 3.</p>
+    <code>Some code.</code>
+    <!-- color will yellow -->
+    <p>Paragraph 4.</p>
+  </body>
+</html>
